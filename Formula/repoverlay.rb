@@ -1,25 +1,25 @@
 class Repoverlay < Formula
   desc "Overlay config files into git repositories without committing them"
   homepage "https://github.com/tylerbutler/repoverlay"
-  version "0.6.0"
+  version "0.7.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/tylerbutler/repoverlay/releases/download/v0.6.0/repoverlay-aarch64-apple-darwin.tar.xz"
-      sha256 "55c7325aefba8a16cb7b44366a86c9855df8da6bf0622cf86758f2ae5a11c3c1"
+      url "https://github.com/tylerbutler/repoverlay/releases/download/v0.7.0/repoverlay-aarch64-apple-darwin.tar.xz"
+      sha256 "0cf47a912b9fcd61c930dfc6baa32b36331e3f0641c0f488d28e4ae5889993df"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tylerbutler/repoverlay/releases/download/v0.6.0/repoverlay-x86_64-apple-darwin.tar.xz"
-      sha256 "617ba92ff008616d3c95e622798c58f4c352daf87505d9cbf92cf9d000f1a646"
+      url "https://github.com/tylerbutler/repoverlay/releases/download/v0.7.0/repoverlay-x86_64-apple-darwin.tar.xz"
+      sha256 "7fbf4ae19d4f6bfa1ea140734685d07e46c94ceddcb68302c70a743e06e80c10"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/tylerbutler/repoverlay/releases/download/v0.6.0/repoverlay-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "998de19d8152739e9b138baecff719a386878587422e0ea2e0544fdbb4920dbb"
+      url "https://github.com/tylerbutler/repoverlay/releases/download/v0.7.0/repoverlay-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "a9667a5129078566e16cf7afd16c1632c2ff1bb02da207490be856104064ddd8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tylerbutler/repoverlay/releases/download/v0.6.0/repoverlay-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "101f657b826ec464d5c9bf2ca4533aa88769cb94f6bf58412ba7e728d7fdaa18"
+      url "https://github.com/tylerbutler/repoverlay/releases/download/v0.7.0/repoverlay-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "65bf08249320d96313898cdf27865b53f2352fa6002b863676b8402259d1c3e9"
     end
   end
   license "MIT"
