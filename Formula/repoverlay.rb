@@ -1,25 +1,25 @@
 class Repoverlay < Formula
   desc "Overlay config files into git repositories without committing them"
   homepage "https://github.com/tylerbutler/repoverlay"
-  version "0.12.0"
+  version "0.14.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/tylerbutler/repoverlay/releases/download/v0.12.0/repoverlay-aarch64-apple-darwin.tar.xz"
-      sha256 "e94bf9ac3d9cd5e04b088f8dd07996a7f642ae31eaf8cc4f989c42e0be8fd7d6"
+      url "https://github.com/tylerbutler/repoverlay/releases/download/v0.14.1/repoverlay-aarch64-apple-darwin.tar.xz"
+      sha256 "5ac23757e083c9f484e5a954ca5e71a249f84b4eac8ce8796bd2b98184f1c638"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tylerbutler/repoverlay/releases/download/v0.12.0/repoverlay-x86_64-apple-darwin.tar.xz"
-      sha256 "bcb5bbd1e44720d47ac1f6a95cd255ec94676867eb5103abccfb98dccd0e9f91"
+      url "https://github.com/tylerbutler/repoverlay/releases/download/v0.14.1/repoverlay-x86_64-apple-darwin.tar.xz"
+      sha256 "c6715772d3c90842c59ec8d857e388bc1c5ec0e176a803f72e0cbc4c60cde05e"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/tylerbutler/repoverlay/releases/download/v0.12.0/repoverlay-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "5a6c44bbd7af26fa8c83577b32c183bbe656b5e4824acbd7c3d8befcfc8a0e6d"
+      url "https://github.com/tylerbutler/repoverlay/releases/download/v0.14.1/repoverlay-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "756b2741ed126b1fc94d08d349bc020bc7c2705ac6108ea4deda489d4ce06417"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tylerbutler/repoverlay/releases/download/v0.12.0/repoverlay-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "31d535023af0734ce4a983765fd6a3406970f93b1d8ccd41039a1fd60f53cf6f"
+      url "https://github.com/tylerbutler/repoverlay/releases/download/v0.14.1/repoverlay-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "3b7c8f5f97a3fd7e04bdabc6be641826cf00e73db630e641d9692812f46e8e8c"
     end
   end
   license "MIT"
