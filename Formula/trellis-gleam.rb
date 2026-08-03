@@ -1,25 +1,25 @@
 class TrellisGleam < Formula
   desc "A workspace CLI for Gleam monorepos: task fan-out, introspection, and release orchestration derived entirely from gleam.toml"
   homepage "https://github.com/tylerbutler/trellis"
-  version "0.9.0"
+  version "0.10.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/tylerbutler/trellis/releases/download/v0.9.0/trellis-gleam-aarch64-apple-darwin.tar.xz"
-      sha256 "022c2cdeb6f0634f06808ea23bf8ccf1da02e2b374cedc0d3939f9635130b251"
+      url "https://github.com/tylerbutler/trellis/releases/download/v0.10.0/trellis-gleam-aarch64-apple-darwin.tar.xz"
+      sha256 "3b6baf0c19e0ee929d6442cb5061b63a28230c01605cb09b9a0e68d29bb8fae2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tylerbutler/trellis/releases/download/v0.9.0/trellis-gleam-x86_64-apple-darwin.tar.xz"
-      sha256 "b803166c7774f7903ba0afe1e9576ae6453ebad601c59c050dc2c9b407b4263d"
+      url "https://github.com/tylerbutler/trellis/releases/download/v0.10.0/trellis-gleam-x86_64-apple-darwin.tar.xz"
+      sha256 "ef1c5061079dc24e3c6d0e6192be705ffab86922000b2ac1d8740f4bbaa931d1"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/tylerbutler/trellis/releases/download/v0.9.0/trellis-gleam-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "17925743818bb196e0835e338d76237d9924b97b8ddb5b2f785f91bdff0df965"
+      url "https://github.com/tylerbutler/trellis/releases/download/v0.10.0/trellis-gleam-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "3588294f9b5db81f9cd5383c5a78570cdd85d28a40ebe2664299ae69ca666e4b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tylerbutler/trellis/releases/download/v0.9.0/trellis-gleam-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "f924827fd9fbf424f5f986f8de3ac9ae61776483973d6f8ac7dbcebb1a6398e7"
+      url "https://github.com/tylerbutler/trellis/releases/download/v0.10.0/trellis-gleam-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c02d12c41a54aaa95e2fd8b3c32c57579ab4d3f9a46998adfb6c2793116ad31e"
     end
   end
   license "MIT"
