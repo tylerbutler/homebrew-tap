@@ -1,25 +1,25 @@
 class TrellisGleam < Formula
   desc "A workspace CLI for Gleam monorepos: task fan-out, introspection, and release orchestration derived entirely from gleam.toml"
   homepage "https://github.com/tylerbutler/trellis"
-  version "0.11.0"
+  version "0.11.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/tylerbutler/trellis/releases/download/v0.11.0/trellis-gleam-aarch64-apple-darwin.tar.xz"
-      sha256 "16dfaaebbbc955fadc6f69d3aefcde87bfb62eef4b12040a08e92c56866e4b82"
+      url "https://github.com/tylerbutler/trellis/releases/download/v0.11.1/trellis-gleam-aarch64-apple-darwin.tar.xz"
+      sha256 "a3a9f7ac7aebeac2a9bd66afc9dd911b6158d7ddb821a7b2de9fed6f6df796f9"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tylerbutler/trellis/releases/download/v0.11.0/trellis-gleam-x86_64-apple-darwin.tar.xz"
-      sha256 "7bbdf7893fee933ac67858acff1b8cee3055a667a29123eb0e77db7f457406b7"
+      url "https://github.com/tylerbutler/trellis/releases/download/v0.11.1/trellis-gleam-x86_64-apple-darwin.tar.xz"
+      sha256 "438f1a5fee5bf09622a9063bd4c2439fcd3a046f2256278bbfd135323b87c768"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/tylerbutler/trellis/releases/download/v0.11.0/trellis-gleam-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "c760621862ff218a04360e604bb59c645bb15c5631fe3a3c3137d9de94c3de62"
+      url "https://github.com/tylerbutler/trellis/releases/download/v0.11.1/trellis-gleam-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "03f1e53bb738a0c80d31455e59115697e5ac1ddd20d62f8f1c01c5d95a5e34af"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tylerbutler/trellis/releases/download/v0.11.0/trellis-gleam-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "316c10c2a09e3121eff5b8d55e3b291af2b297ef61f854d168b6258cb50a8f9d"
+      url "https://github.com/tylerbutler/trellis/releases/download/v0.11.1/trellis-gleam-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "2dce13cb84a6d1040d26177070a27e374462f48f85cc056643f58684ec81d34a"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class TrellisGleam < Formula
   end
 
   def install
-    bin.install "trellis" if OS.mac? && Hardware::CPU.arm?
-    bin.install "trellis" if OS.mac? && Hardware::CPU.intel?
-    bin.install "trellis" if OS.linux? && Hardware::CPU.arm?
-    bin.install "trellis" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "trellis"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "trellis"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "trellis"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "trellis"
+    end
 
     install_binary_aliases!
 
