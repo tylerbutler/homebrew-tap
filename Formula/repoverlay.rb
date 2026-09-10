@@ -1,25 +1,25 @@
 class Repoverlay < Formula
   desc "Overlay config files into git repositories without committing them"
   homepage "https://github.com/tylerbutler/repoverlay"
-  version "0.17.0"
+  version "0.17.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/tylerbutler/repoverlay/releases/download/v0.17.0/repoverlay-aarch64-apple-darwin.tar.xz"
-      sha256 "50a5be3d89833e432a73df93b282c268752988677eacf76f8c768b19c468a49c"
+      url "https://github.com/tylerbutler/repoverlay/releases/download/v0.17.1/repoverlay-aarch64-apple-darwin.tar.xz"
+      sha256 "7cfc3888acb6480873be112f473a50cd79f566f2251da960e7e89875c26779fd"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tylerbutler/repoverlay/releases/download/v0.17.0/repoverlay-x86_64-apple-darwin.tar.xz"
-      sha256 "4ff39ffbf5756d3496bfbb81ebee04ddb36b3627caf433cdc1a6c79603c1cde6"
+      url "https://github.com/tylerbutler/repoverlay/releases/download/v0.17.1/repoverlay-x86_64-apple-darwin.tar.xz"
+      sha256 "0c25ccf4c036fbabeb6e470a31686aefcae321778fef219196e6428604021c5a"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/tylerbutler/repoverlay/releases/download/v0.17.0/repoverlay-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "5c299cd07ee050a4149aaa7a37b596c49fe973c9b6f7152501178abe08e7a8a8"
+      url "https://github.com/tylerbutler/repoverlay/releases/download/v0.17.1/repoverlay-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "631051e953d7542187645412fc04e85ace149121f78c7ef9eb6a2ebd1a08aeab"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tylerbutler/repoverlay/releases/download/v0.17.0/repoverlay-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "58155e45ecf283a1b40e5b99657cc088b36bf8ffc694cdb89bf2e30378afe79b"
+      url "https://github.com/tylerbutler/repoverlay/releases/download/v0.17.1/repoverlay-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "a8695fb3f39881769585bdf02b3f7679ede6fb03ca10518e6a3f9ffc7f2de6f3"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Repoverlay < Formula
   end
 
   def install
-    bin.install "repoverlay" if OS.mac? && Hardware::CPU.arm?
-    bin.install "repoverlay" if OS.mac? && Hardware::CPU.intel?
-    bin.install "repoverlay" if OS.linux? && Hardware::CPU.arm?
-    bin.install "repoverlay" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "repoverlay"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "repoverlay"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "repoverlay"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "repoverlay"
+    end
 
     install_binary_aliases!
 
